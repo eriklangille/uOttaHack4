@@ -1,0 +1,39 @@
+@import './Colors.scss';
+
+.profile {
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 600px;
+}
+
+.avatar {
+  height: 72px;
+  width: 72px;
+  border-radius: 50px;
+}
+
+.name {
+  color: $black;
+  font-weight: 900;
+  font-size: 44px;
+  margin: 10px 0 0 20px;
+}
+
+.description {
+  color: $black;
+  text-align: center;
+  font-weight: normal;
+  font-size: 28px;
+  width: 600px;
+}
