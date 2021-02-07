@@ -1,5 +1,5 @@
 import React, {FunctionComponent } from 'react';
-import style from '../styles/SubtitleText.module.css'
+import style from '../styles/SubtitleText.module.scss'
 
 type SubTitleProps = {
 }

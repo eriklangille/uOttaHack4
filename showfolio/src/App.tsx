@@ -6,6 +6,7 @@ import ProjectCard from './components/ProjectCard';
 import ProjectList from './components/ProjectList';
 import InfoBox from './components/InfoBox';
 import ProjectPage from './components/ProjectPage';
+import ProfilePage from './components/ProfilePage';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 
@@ -14,7 +15,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/:user" exact component={ProjectList} />
+          <Route path="/:user" exact component={ProfilePage} />
           <Route path="/:user/:project" exact component={ProjectPage} />
         </Switch>
       </Router>
