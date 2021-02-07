@@ -6,7 +6,7 @@ type DateRange = {
   EndDate: Date,
 }
 
-const formatDate = (date: Date) : string => {
+export const formatDate = (date: Date) : string => {
   const options = { year: 'numeric', month: 'short', day: 'numeric', timeZone: "America/Vancouver"}
   return date.toLocaleDateString("en-US", options);
 }

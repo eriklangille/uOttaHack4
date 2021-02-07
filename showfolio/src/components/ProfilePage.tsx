@@ -59,7 +59,7 @@ const ProfilePage = () => {
           Avatar={`${url}/assets/${getProfileInfo()["Avatar"]}`} 
           Description={getProfileInfo()["description"]}
           />
-          <ProjectList Projects={getProfileInfo()["Projects"]} />
+          <ProjectList Projects={getProfileInfo()["Projects"]} User={user}/>
         </div>
       }
     </div>

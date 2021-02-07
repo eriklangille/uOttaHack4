@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/:user" exact component={ProfilePage} />
-          <Route path="/:user/:project" exact component={ProjectPage} />
+          <Route path="/:user/:project" component={ProjectPage} />
         </Switch>
       </Router>
 

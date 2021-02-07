@@ -7,13 +7,14 @@ import SubtitleText from './SubtitleText';
 type ProjectListProps = {
   Projects: Array<ProjectInfo>
   Pinned?: number
+  User: string
 }
 
 interface ProjectInfo {
   [key:string]: any;
 }
 
-const Project = (project: ProjectInfo, index: number) =>
+const Project = (project: ProjectInfo, index: number, user: string) =>
 <ProjectCard 
   Name={project["name"]} 
   key={index}
@@ -23,22 +24,22 @@ const Project = (project: ProjectInfo, index: number) =>
   EndDate={new Date(`${project["endDate"]} 8:00`)}
   Tags={project["tags"]}
   Teammates={project["teammates"]}
-  Url={`./${project["id"]}`}
+  Url={`${user}/${project["id"]}`}
 />
 
-const ProjectList = ( { Projects, Pinned } : ProjectListProps) => {
+const ProjectList = ( { Projects, Pinned, User } : ProjectListProps) => {
   Pinned = Pinned || 0
   let PinnedProject = Projects[Pinned] || Projects[0]
   return (
     <div className={style.ProjectList}>
       <SubtitleText>FEATURED</SubtitleText>
       <div className={style.separator}/>
-      {Project(PinnedProject, Pinned)}
+      {Project(PinnedProject, Pinned, User)}
       <div className={style.separator2}/>
       <SubtitleText>OTHER PROJECTS</SubtitleText>
       <div className={style.separator}/>
       {Projects.map((project: ProjectInfo, index: number) => 
-        index === Pinned ? null : Project(project, index)
+        index === Pinned ? null : Project(project, index, User)
       )}
       <div className={style.separator2}/>
     </div>

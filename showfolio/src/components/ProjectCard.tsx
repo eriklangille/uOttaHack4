@@ -30,7 +30,7 @@ const ProjectCard = ({Name, Image, ShortDescription, StartDate, EndDate, Tags, T
         StartDate={StartDate}
         EndDate={EndDate}
       />
-      <Link to={Url} style={{textDecoration: 'none'}}>
+      <Link to={location => ({ ...location, pathname: Url})} style={{textDecoration: 'none'}}>
         <div className={style.body}>
           <div className={style.image}>
             <img alt="Project" src={Image} className={style.image} />

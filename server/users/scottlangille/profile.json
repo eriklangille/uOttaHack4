@@ -15,8 +15,8 @@
         {"name": "Scott", "role": "UI/UX Designer", "url": "https://github.com/scottlangille"}
       ],
       "links": {
-        "github": "https://github.com/scottlangille",
-        "web": "https://scottlangille.com"
+        "GitHub": "https://github.com/eriklangille/uOttaHack4",
+        "Website": "https://scottlangille.com"
       },
       "tags": ["React", "Adobe XD", "TypeScript", "Node.js", "Express"]
     },
@@ -30,8 +30,8 @@
         {"name": "Scott", "role": "UI/UX Designer", "url": "https://github.com/scottlangille"}
       ],
       "links": {
-        "github": "https://github.com/scottlangille",
-        "web": "https://scottlangille.com"
+        "GitHub": "https://github.com/scottlangille",
+        "Website": "https://scottlangille.com"
       },
       "tags": ["React", "Adobe XD"]
     }

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios, { url } from '../utils/axios'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import style from '../styles/ProjectPage.module.scss';
 import InfoBox from './InfoBox';
+import {formatDate} from './DateRange'
 
-type Link = {
+type Params = {
   user: string,
   project: string
 }
@@ -22,7 +23,7 @@ const ProjectPage = () => {
 
   const [projectInfo, setProjectInfo] = useState();
 
-  let { user, project } : Link = useParams();
+  let { user, project } : Params = useParams();
 
   const getProject = async (userId: string, projectId: string) => {
     await axios.get(`users/${userId}/${projectId}`)
@@ -69,20 +70,22 @@ const ProjectPage = () => {
 
   const Section = ({ title, body } : SectionProps) => <div>
     <h2>{title}</h2>
-    {body.split('\n').map(str => <p>{str}</p>)}
+    {body.split('\n').map((str, index) => <p key={index}>{str}</p>)}
   </div>
 
   return (
     <div className={style.projectpage}>
       {getMainProject() instanceof Array ? null :
       <div className={style.container}>
-        <div className={style.controlbar}>
-          <i className="material-icons">arrow_back</i>
-          <div className={style.separator}/>
-        </div>
-        <div className={style.closebutton}>
-          <i className="material-icons">close</i>
-        </div>
+        <Link to={`/${user}`} style={{textDecoration: 'none'}}>
+          <div className={style.controlbar}>
+            <i className="material-icons">arrow_back</i>
+            <div className={style.separator}/>
+          </div>
+          <div className={style.closebutton}>
+            <i className="material-icons">close</i>
+          </div>
+        </Link>
         <div className={style.main}>
           <img src={`${url}/assets/${getMainImage()}`} className={style.image} />
           <div className={style.longform}>
@@ -98,22 +101,24 @@ const ProjectPage = () => {
         </div>
         <div className={style.secondary}>
           <InfoBox Title="Timeline">
-            <p>Feb 5, 2021 – Feb 7, 2021</p>
+            <p>{formatDate(new Date(`${getMainProject()["startDate"]} 8:00`))} – {formatDate(new Date(`${getMainProject()["endDate"]} 8:00`))}</p>
           </InfoBox>
           <InfoBox Title="Team">
-            <a href="#">Scott Langille</a>
-            <p>UI/UX Designer</p>
-            <a href="#">Erik Langille</a>
-            <p>Full-Stack Developer</p>
+            {getMainProject()["teammates"].map((member: ProjectInfo, index: number) => <> 
+              <a key={index} href={member["url"]}>{member["name"]}</a>
+              <p key={`p_${index}`}>{member["role"]}</p>
+            </>)}
           </InfoBox>
           <InfoBox Title="Links" Style="links">
-          <p><a href="#">View on Website</a></p>
-          <p><a href="#">View on GitHub</a></p>
+            {Object.entries(getMainProject()["links"]).map(([key, value]) => 
+              <p key={key}><a href={`${value}`}>View on {key}</a></p>
+            )}
           </InfoBox>
           <InfoBox Title="Tags" Style="tags">
             <div>
-              <span>ReactJS</span>
-              <span>Adobe XD</span>
+              {getMainProject()["tags"].map((tag: ProjectInfo, index: number) =>
+                <span key={index}>{tag}</span>
+              )}
             </div>
           </InfoBox>
             </div>
