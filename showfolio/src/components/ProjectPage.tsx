@@ -77,11 +77,11 @@ const ProjectPage = () => {
       {getMainProject() instanceof Array ? null :
       <div className={style.container}>
         <div className={style.controlbar}>
-          <i className="material-icons">arrow_back</i>
+          <a href="."><i className="material-icons">arrow_back</i></a>
           <div className={style.separator}/>
         </div>
         <div className={style.closebutton}>
-          <i className="material-icons">close</i>
+          <a href="."><i className="material-icons">close</i></a>
         </div>
         <div className={style.main}>
           <img src={`${url}/assets/${getMainImage()}`} className={style.image} />

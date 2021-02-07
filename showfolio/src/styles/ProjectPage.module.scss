@@ -47,15 +47,17 @@ body {
     flex-flow: column nowrap;
     align-items: flex-end;
 
-    i {
-        color: #AAAAAA;
-        font-size: 36px;
+    a {
+        i {
+            color: #AAAAAA;
+            font-size: 36px;
 
-        user-select: none;
+            user-select: none;
 
-        &:hover {
-            color: $primary;
-            cursor: pointer;
+            &:hover {
+                color: $primary;
+                cursor: pointer;
+            }
         }
     }
 
@@ -87,22 +89,24 @@ body {
 
     z-index: 99;
     position: absolute;
-    color: $white;
-    opacity: 0.92;
-    text-shadow: 0px 0px 6px $black;
 
     top: 10px;
     left: 10px;
 
     user-select: none;
 
-    i {
-        font-size: 36px;
-    }
+    a {
+        i {
+            font-size: 36px;
+            color: $white;
+            opacity: 0.92;
+            text-shadow: 0px 0px 6px $black;
 
-    &:hover {
-        color: $primary;
-        cursor: pointer;
+            &:hover {
+                color: $primary;
+                cursor: pointer;
+            }
+        }
     }
 }
 
