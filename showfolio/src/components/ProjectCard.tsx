@@ -42,7 +42,7 @@ const ProjectCard = ({Name, Image, ShortDescription, StartDate, EndDate, Tags, T
             </div>
             <div className={style.details}>
               <TagList Tags={Tags} />
-              {(Teammates.length === 0)? null:<div className={style.teammates}><i className="material-icons">groups</i><span> {Teammates.length}</span></div>}
+              {(Teammates.length <= 1)? null:<div className={style.teammates}><i className="material-icons">groups</i><span> {Teammates.length}</span></div>}
             </div>
           </div>
         </div>
