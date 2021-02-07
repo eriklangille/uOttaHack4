@@ -20,6 +20,8 @@
     cursor: pointer;
   }
 
+  transition: ease all 0.5s;
+
   @media only screen and (max-width: 824px) {
     flex-direction: column;
     width: 350px;

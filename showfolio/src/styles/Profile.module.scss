@@ -3,37 +3,53 @@
 .profile {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+
+  margin-right: 32px;
+  margin-left: 32px;
+
+  transition: ease all 0.5s;
+
+  @media only screen and (max-width: 824px) {
+    font-size: 15px;
+  }
 }
 
 .block {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center; // horizontally centred
 }
 
 .title {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  width: 600px;
+  align-items: center; // vertically centred
+  justify-content: center; // horizontally centred
+  max-width: 600px;
 }
 
 .avatar {
-  height: 72px;
-  width: 72px;
+  height: 3.6em;
+  width: 3.6em;
   border-radius: 50px;
 }
 
 .name {
   color: $black;
   font-weight: 900;
-  font-size: 44px;
-  margin: 10px 0 0 20px;
+  font-size: 2.1em;
+  margin-left: 20px;
 }
 
 .description {
-  color: $black;
+  color: $text-bl1;
   text-align: center;
   font-weight: normal;
-  font-size: 28px;
-  width: 600px;
+  font-size: 1.35em;
+  line-height: 1.25em;
+  max-width: 500px;
+
+  margin-top: 36px;
 }

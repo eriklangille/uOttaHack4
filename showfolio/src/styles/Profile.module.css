@@ -1,0 +1,74 @@
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  margin-right: 32px;
+  margin-left: 32px;
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
+}
+
+@media only screen and (max-width: 824px) {
+  .profile {
+    font-size: 15px;
+  }
+}
+
+.block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 600px;
+}
+
+.avatar {
+  height: 3.6em;
+  width: 3.6em;
+  border-radius: 50px;
+}
+
+.name {
+  color: #000;
+  font-weight: 900;
+  font-size: 2.1em;
+  margin-left: 20px;
+}
+
+.description {
+  color: #232323;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.35em;
+  line-height: 1.25em;
+  max-width: 500px;
+  margin-top: 36px;
+}
+/*# sourceMappingURL=Profile.module.css.map */
