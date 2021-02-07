@@ -3,11 +3,21 @@ import './App.scss';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import ProjectCard from './components/ProjectCard';
+import ProjectList from './components/ProjectList';
+import ProjectPage from './components/ProjectPage';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Router>
+        <Switch>
+          <Route path="/:user" exact component={ProjectList} />
+          <Route path="/:user/:project" exact component={ProjectPage} />
+        </Switch>
+      </Router>
+
+      {/* <Header />
       <Profile 
         Name="Scott Langille" 
         Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore." 
@@ -20,7 +30,7 @@ function App() {
         StartDate={new Date("2021-02-05 8:00")}
         EndDate={new Date("2021-02-07 8:00")}
         Tags={["ReactJS", "Adobe XD", "Node.js", "Express", "TypeScript"]}
-      />
+      /> */}
     </div>
   );
 }

@@ -27,11 +27,13 @@ const getProfile = async (user: string, project: string = null) => {
       const md = await getProjectMarkdown(user, project);
       profile["Projects"].forEach(async proj => {
         if(proj["name"] == project) {
-          proj["gallery"] = await getGallery(user, project);
           proj["info"] = md;
         }
       })
     }
+    profile["Projects"].forEach(async proj => {
+      proj["gallery"] = await getGallery(user, proj["name"]);
+    })
     profile["Avatar"] = await getAvatar(user)
     return profile
   } catch (err) {
