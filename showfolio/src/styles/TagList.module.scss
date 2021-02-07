@@ -1,0 +1,31 @@
+@import './Colors.scss';
+
+.tagGroup {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  height: 35px;
+}
+
+.tag {
+  background-color: $grey;
+  border-radius: 20px;
+  padding: 3px 8px;
+}
+
+.tagRest {
+  margin: 0 10px 0 0;
+}
+
+.tagLast {
+  margin: 0;
+}
+
+.tagText {
+  color: $white;
+  margin: 4px 0 0 0;
+}
+
+.TagGroup div {
+  margin: 0 0 0 10px;
+}
