@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios, { url } from '../utils/axios'
 import { useParams } from 'react-router-dom'
+import style from '../styles/ProjectPage.module.scss';
+import InfoBox from './InfoBox';
 
 type Link = {
   user: string,
@@ -71,15 +73,22 @@ const ProjectPage = () => {
   </div>
 
   return (
-    <div>
+    <div className={style.projectpage}>
       {getMainProject() instanceof Array ? null :
-      <div>
-        <div>
-          <img src={`${url}/assets/${getMainImage()}`} />
-          <h1>
-            {getMainProject()["name"]}
-          </h1>
-          <div>
+      <div className={style.container}>
+        <div className={style.controlbar}>
+          <i className="material-icons">arrow_back</i>
+          <div className={style.separator}/>
+        </div>
+        <div className={style.closebutton}>
+          <i className="material-icons">close</i>
+        </div>
+        <div className={style.main}>
+          <img src={`${url}/assets/${getMainImage()}`} className={style.image} />
+          <div className={style.longform}>
+            <h1>
+              {getMainProject()["name"]}
+            </h1>
             <Section title="Summary" body={getMainProject()["info"]["summary"]} />
             <Section title="Problem" body={getMainProject()["info"]["problem"]} />
             <Section title="Solution" body={getMainProject()["info"]["solution"]} />
@@ -87,6 +96,27 @@ const ProjectPage = () => {
             <Section title="Outcome" body={getMainProject()["info"]["outcome"]} />
           </div>
         </div>
+        <div className={style.secondary}>
+          <InfoBox Title="Timeline">
+            <p>Feb 5, 2021 – Feb 7, 2021</p>
+          </InfoBox>
+          <InfoBox Title="Team">
+            <a href="#">Scott Langille</a>
+            <p>UI/UX Designer</p>
+            <a href="#">Erik Langille</a>
+            <p>Full-Stack Developer</p>
+          </InfoBox>
+          <InfoBox Title="Links" Style="links">
+          <p><a href="#">View on Website</a></p>
+          <p><a href="#">View on GitHub</a></p>
+          </InfoBox>
+          <InfoBox Title="Tags" Style="tags">
+            <div>
+              <span>ReactJS</span>
+              <span>Adobe XD</span>
+            </div>
+          </InfoBox>
+            </div>
       </div>
 }
     </div>
