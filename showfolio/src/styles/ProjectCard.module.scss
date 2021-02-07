@@ -1,0 +1,35 @@
+@import './Colors.scss';
+
+
+.project {
+  height: 284px;
+  width: 1020px;
+}
+
+.body {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: $white;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.information {
+  padding: 25px;
+}
+
+.title {
+  font-size: 28px;
+}
+
+.textboxes {
+  margin: 0 100px 0 0;
+  height: 170px;
+  color: $black;
+}
+
+.shortdescription {
+  font-size: 24px;
+  margin: 10px 0 0 0;
+}
