@@ -7,7 +7,7 @@ type SubTitleProps = {
 const SubtitleText: FunctionComponent<SubTitleProps> = ({ children }) => {
   return (
     <div>
-      <h4 className={style.text}>{children}</h4>
+      <h2 className={style.text}>{children}</h2>
     </div>
   );
 }
