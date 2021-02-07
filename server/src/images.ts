@@ -15,8 +15,8 @@ const LoadImages = async (directory, assets) => {
   files.forEach((file : string) => {
     if (/\.(png|jpe?g|svg)$/.test(file)) {
       console.log(file)
-      const info = file.match(/.*users\/([a-zA-Z0-9_.-]*)\/([a-zA-Z0-9_.-]*)$/)
-      const moreinfo = file.match(/.*users\/([a-zA-Z0-9_.-]*)\/([a-zA-Z0-9_.-]*)\/([a-zA-Z0-9_.-]*)$/)
+      const info = file.match(/.*users[\/\\]([a-zA-Z0-9_.-]*)[\/\\]([a-zA-Z0-9_.-]*)$/)
+      const moreinfo = file.match(/.*users[\/\\]([a-zA-Z0-9_.-]*)[\/\\]([a-zA-Z0-9_.-]*)[\/\\]([a-zA-Z0-9_.-]*)$/)
       let filepath = "";
 
       if (moreinfo != null) {
