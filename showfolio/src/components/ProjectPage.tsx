@@ -77,15 +77,18 @@ const ProjectPage = () => {
     <div className={style.projectpage}>
       {getMainProject() instanceof Array ? null :
       <div className={style.container}>
-        <Link to={`/${user}`} style={{textDecoration: 'none'}}>
-          <div className={style.controlbar}>
+        <div className={style.controlbar}>
+          <Link to={`/${user}`} style={{textDecoration: 'none'}}>
             <i className="material-icons">arrow_back</i>
-            <div className={style.separator}/>
-          </div>
-          <div className={style.closebutton}>
+          </Link>
+          <div className={style.separator}/>
+        </div>
+        <div className={style.closebutton}>
+          <Link to={`/${user}`} style={{textDecoration: 'none'}}>
             <i className="material-icons">close</i>
-          </div>
-        </Link>
+          </Link>
+        </div>
+        
         <div className={style.main}>
           <img src={`${url}/assets/${getMainImage()}`} alt="" className={style.image} />
           <div className={style.longform}>
