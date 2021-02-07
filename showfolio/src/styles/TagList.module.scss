@@ -2,19 +2,20 @@
 
 .tagGroup {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   overflow: hidden;
-  height: 35px;
+  // height: 30px;
 }
 
 .tag {
   background-color: $grey;
   border-radius: 20px;
-  padding: 3px 8px;
+  padding: 4px 12px;
+  min-width: fit-content;
 }
 
 .tagRest {
-  margin: 0 10px 0 0;
+  margin: 0 7px 0 0;
 }
 
 .tagLast {
@@ -23,7 +24,7 @@
 
 .tagText {
   color: $white;
-  margin: 4px 0 0 0;
+  margin: 0;
 }
 
 .TagGroup div {

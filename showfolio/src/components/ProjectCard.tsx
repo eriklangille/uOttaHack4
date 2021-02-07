@@ -20,6 +20,7 @@ type Teammate = {
 }
 
 const ProjectCard = ({Name, Image, ShortDescription, StartDate, EndDate, Tags, Teammates}: ProjectCardProps) => {
+  Teammates = Teammates || []
   return (
     <div className={style.project}>
       <DateRange 
@@ -27,16 +28,17 @@ const ProjectCard = ({Name, Image, ShortDescription, StartDate, EndDate, Tags, T
         EndDate={EndDate}
       />
       <div className={style.body}>
-        <div>
-          <img alt="Project" src={Image} />
+        <div className={style.image}>
+          <img alt="Project" src={Image} className={style.image} />
         </div>
         <div className={style.information}>
           <div className={style.textboxes}>
             <h2 className={style.title}>{Name}</h2>
             <p className={style.shortdescription}>{ShortDescription}</p>
           </div>
-          <div>
+          <div className={style.details}>
             <TagList Tags={Tags} />
+            {(Teammates.length === 0)? null:<div className={style.teammates}><i className="material-icons">groups</i><span> {Teammates.length}</span></div>}
           </div>
         </div>
       </div>

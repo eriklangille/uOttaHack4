@@ -1,0 +1,37 @@
+.tagGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  overflow: hidden;
+}
+
+.tag {
+  background-color: #696B7B;
+  border-radius: 20px;
+  padding: 4px 12px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.tagRest {
+  margin: 0 7px 0 0;
+}
+
+.tagLast {
+  margin: 0;
+}
+
+.tagText {
+  color: #fafafa;
+  margin: 0;
+}
+
+.TagGroup div {
+  margin: 0 0 0 10px;
+}
+/*# sourceMappingURL=TagList.module.css.map */

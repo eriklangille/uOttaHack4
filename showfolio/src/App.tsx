@@ -20,6 +20,18 @@ function App() {
         StartDate={new Date("2021-02-05 8:00")}
         EndDate={new Date("2021-02-07 8:00")}
         Tags={["ReactJS", "Adobe XD", "Node.js", "Express", "TypeScript"]}
+        Teammates={[
+                    {
+                    Name: "Scott Langille",
+                    Role: "UI/UX Designer",
+                    Url: "#"
+                    },
+                    {
+                    Name: "Erik Langille",
+                    Role: "Full-Stack Developer",
+                    Url: "#"
+                    }
+                  ]}
       />
     </div>
   );

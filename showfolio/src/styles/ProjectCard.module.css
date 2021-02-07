@@ -1,0 +1,96 @@
+.project {
+  height: 200px;
+  width: 780px;
+}
+
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 3px 1em 0 rgba(78, 91, 198, 0.08);
+          box-shadow: 0px 3px 1em 0 rgba(78, 91, 198, 0.08);
+}
+
+.body:hover {
+  -webkit-box-shadow: 0px 3px 1em 0 rgba(78, 91, 198, 0.2);
+          box-shadow: 0px 3px 1em 0 rgba(78, 91, 198, 0.2);
+  cursor: pointer;
+}
+
+.image {
+  height: 100%;
+  width: auto;
+  margin: 0;
+}
+
+.information {
+  padding: 25px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #000;
+}
+
+.textboxes {
+  color: #000;
+}
+
+.shortdescription {
+  font-size: 1.1em;
+  margin-top: 0.8em;
+  color: #232323;
+}
+
+.details {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 1em;
+}
+
+.teammates {
+  color: #696B7B;
+  padding: 3px 0px 3px 8px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.teammates i {
+  font-size: 1.5em;
+}
+
+.teammates span {
+  font-weight: 600;
+}
+/*# sourceMappingURL=ProjectCard.module.css.map */
