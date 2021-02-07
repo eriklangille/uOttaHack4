@@ -1,0 +1,23 @@
+{
+  "id": "scottlangille",
+  "name": "Scott Langille",
+  "description": "First year Business and Computer Science Student at UBC",
+  "pinned": 0,
+  "Projects": [
+    {
+      "id": 0,
+      "name": "uOttaHack",
+      "shortDescription": "A hackathon based in Ottawa",
+      "startDate": "2021-02-05",
+      "endDate": "2021-02-07",
+      "teammates": [
+        {"name": "Erik", "role": "Developer", "url": "https://github.com/eriklangille"}
+      ],
+      "links": {
+        "github": "https://github.com/scottlangille",
+        "web": "https://scottlangille.com"
+      },
+      "tags": ["React", "Adobe XD", "TypeScript"]
+    }
+  ]
+}
