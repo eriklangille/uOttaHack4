@@ -1,0 +1,75 @@
+@import './Colors.scss';
+
+.infobox {
+    width: 280px;
+    box-sizing: border-box;
+    padding: 18px 22px;
+    border-radius: 10px;
+    
+    background-color: $white;
+    box-shadow: 0px 1px 5px 0 rgba($primary, 0.16);
+
+    margin-bottom: 28px;
+}
+
+.title {
+    text-transform: uppercase;
+    color: $primary;
+    font-weight: bold;
+    
+    font-size: 0.8em;
+    
+    p {
+        margin: 0;
+    }
+}
+
+.content {
+    margin-top: 12px;
+
+    font-size: 14px;
+    color: $text-bl2;
+    
+    p {
+        margin: 0;
+        margin-top: 0.1em;
+        margin-bottom: 0.8em;
+    }
+    
+    p:first-child {
+        margin-top: 0;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $text-bl1;
+
+        font-size: 1.1em;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.tags {
+    display: flex;
+    flex-flow: row wrap;
+
+    span {
+        margin-right: 12px;
+    }
+}
+
+.links {
+    a {
+        font-size: 14px;
+    }
+    p {
+        margin-bottom: 6px;
+    }
+}
