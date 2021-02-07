@@ -2,30 +2,27 @@
 
 .tagGroup {
   display: flex;
-  flex-flow: row nowrap;
-  overflow: hidden;
-  height: 35px;
+  flex-flow: row wrap;
+  // overflow: hidden;
 }
 
 .tag {
   background-color: $grey;
   border-radius: 20px;
-  padding: 3px 8px;
+  padding: 4px 12px;
+  min-width: fit-content;
+  margin-bottom: 5px;
 }
 
 .tagRest {
-  margin: 0 10px 0 0;
+  margin-right: 6px;
 }
 
 .tagLast {
-  margin: 0;
+  margin-right: 0;
 }
 
 .tagText {
   color: $white;
-  margin: 4px 0 0 0;
-}
-
-.TagGroup div {
-  margin: 0 0 0 10px;
+  margin: 0;
 }
