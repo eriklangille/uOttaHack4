@@ -59,11 +59,15 @@
 }
 
 .tags {
-    display: flex;
-    flex-flow: row wrap;
 
-    span {
-        margin-right: 12px;
+    div {
+        display: flex;
+        flex-flow: row wrap;
+
+        div {
+            margin-right: 12px;
+            margin-bottom: 2px;
+        }
     }
 }
 

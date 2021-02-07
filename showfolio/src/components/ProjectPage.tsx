@@ -120,7 +120,7 @@ const ProjectPage = () => {
           <InfoBox Title="Tags" Style="tags">
             <div>
               {getMainProject()["tags"].map((tag: ProjectInfo, index: number) =>
-                <span key={index}>{tag}</span>
+                <div key={index}>{tag}</div>
               )}
             </div>
           </InfoBox>
