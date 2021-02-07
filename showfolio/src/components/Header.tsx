@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div>
       <h1 className={style.logo}>
-        showfol.io
+        showfolio
       </h1>
     </div>
   );
