@@ -87,7 +87,7 @@ const ProjectPage = () => {
           </div>
         </Link>
         <div className={style.main}>
-          <img src={`${url}/assets/${getMainImage()}`} className={style.image} />
+          <img src={`${url}/assets/${getMainImage()}`} alt="" className={style.image} />
           <div className={style.longform}>
             <h1>
               {getMainProject()["name"]}
