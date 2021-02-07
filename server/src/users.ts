@@ -25,17 +25,48 @@ const getProfile = async (user: string, project: string = null) => {
     console.log("project", project)
     if (project != null) {
       const md = await getProjectMarkdown(user, project);
-      profile["Projects"].forEach(proj => {
+      profile["Projects"].forEach(async proj => {
         if(proj["name"] == project) {
+          proj["gallery"] = await getGallery(user, project);
           proj["info"] = md;
         }
       })
     }
+    profile["Avatar"] = await getAvatar(user)
     return profile
   } catch (err) {
     console.error(err);
     return {}
   }
+}
+
+const getAvatar = async (user: string) => {
+  let image = ""
+  try {
+   fs.readdirSync(path.join(__dirname, "../assets")).forEach(async file => {
+     if(file.startsWith(`${user}__`)) {
+       image = file
+       return
+     }
+   })
+  } catch (err) {
+    console.log(err)
+  }
+  return image;
+}
+
+const getGallery = async (user: string, project: string) => {
+  let image = []
+  try {
+   fs.readdirSync(path.join(__dirname, "../assets")).forEach(async file => {
+     if(file.startsWith(`${user}_${project}`)) {
+       image.push(file)
+     }
+   })
+  } catch (err) {
+    console.log(err)
+  }
+  return image;
 }
 
 const getProjectMarkdown = async (user: string, project: string) => {
