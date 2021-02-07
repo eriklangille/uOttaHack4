@@ -15,8 +15,8 @@
         {"name": "Scott", "role": "UI/UX Designer", "url": "https://github.com/scottlangille"}
       ],
       "links": {
-        "github": "https://github.com/scottlangille",
-        "web": "https://scottlangille.com"
+        "github": "https://github.com/eriklangille/uOttaHack4",
+        "web": "https://eriklangille.com"
       },
       "tags": ["React", "Adobe XD", "TypeScript", "Node.js", "Express"]
     },
@@ -24,16 +24,16 @@
       "id": "nwHacks2021",
       "name": "nwHacks 2021 (Find My Neighbourhood)",
       "shortDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      "startDate": "2021-01-15",
-      "endDate": "2021-01-17",
+      "startDate": "2021-01-09",
+      "endDate": "2021-01-10",
       "teammates": [
-        {"name": "Scott", "role": "UI/UX Designer", "url": "https://github.com/scottlangille"}
+        {"name": "Erik", "role": "Data / Backend Engineer", "url": "https://github.com/eriklangille"}
       ],
       "links": {
-        "github": "https://github.com/scottlangille",
-        "web": "https://scottlangille.com"
+        "github": "https://github.com/eriklangille",
+        "web": "https://eriklangille.com"
       },
-      "tags": ["React", "Adobe XD"]
+      "tags": ["React", "JavaScript", "NodeJS", "Python", "PostgreSQL"]
     }
   ]
 }
