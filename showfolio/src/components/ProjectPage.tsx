@@ -84,7 +84,7 @@ const ProjectPage = () => {
           <i className="material-icons">close</i>
         </div>
         <div className={style.main}>
-          <img src={`${url}/assets/${getMainImage()}`} className={style.image} />
+          <img src={`${url}/assets/${getMainImage()}`} alt="" className={style.image} />
           <div className={style.longform}>
             <h1>
               {getMainProject()["name"]}
