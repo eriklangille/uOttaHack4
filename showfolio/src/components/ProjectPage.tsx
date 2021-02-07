@@ -12,6 +12,10 @@ type SectionProps = {
   body: string
 }
 
+interface ProjectInfo {
+  [key:string]: any;
+}
+
 const ProjectPage = () => {
 
   const [projectInfo, setProjectInfo] = useState();
@@ -34,8 +38,9 @@ const ProjectPage = () => {
       // console.log("PROJECTINFO")
       // console.log(projectInfo)
       try {
-        console.log(projectInfo["Projects"][projectInfo["MainProject"]]);
-        projects = projectInfo["Projects"][projectInfo["MainProject"]]
+        // console.log(projectInfo["Projects"][projectInfo["MainProject"]]);
+        let proj : ProjectInfo = projectInfo || []
+        projects = proj["Projects"][proj["MainProject"]]
       } catch {
         projects = []
       }
