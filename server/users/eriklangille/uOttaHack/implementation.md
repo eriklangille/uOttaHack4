@@ -1,0 +1,1 @@
+React app with Typescript with easy building using markdown
