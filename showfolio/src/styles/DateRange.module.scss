@@ -6,14 +6,15 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 20px;
+  text-align: center;
 }
 
 .date {
   color: $primary;
   opacity: 0.7;
-  font-size: 18px;
+  font-size: 0.85em;
   font-weight: bold;
-  flex: 0 0 100px;
+  // flex: 0 0 100px;
 }
 
 .separator {
@@ -21,5 +22,5 @@
   opacity: 0.7;
   flex: 1 1 auto;
   background-color: $primary;
-  margin: 0 10px 0 0;
+  margin: 0 10px;
 }

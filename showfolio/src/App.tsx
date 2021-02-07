@@ -18,6 +18,7 @@ function App() {
       </Router>
 
       {/* <Header />
+      <Header/>
       <Profile 
         Name="Scott Langille" 
         Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore." 
@@ -31,6 +32,7 @@ function App() {
         EndDate={new Date("2021-02-07 8:00")}
         Tags={["ReactJS", "Adobe XD", "Node.js", "Express", "TypeScript"]}
       /> */}
+      {/* <ProjectList/> */}
     </div>
   );
 }
