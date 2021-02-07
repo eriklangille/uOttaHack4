@@ -6,7 +6,6 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  overflow: hidden;
 }
 
 .tag {
@@ -16,22 +15,19 @@
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
+  margin-bottom: 5px;
 }
 
 .tagRest {
-  margin: 0 7px 0 0;
+  margin-right: 6px;
 }
 
 .tagLast {
-  margin: 0;
+  margin-right: 0;
 }
 
 .tagText {
   color: #fafafa;
   margin: 0;
-}
-
-.TagGroup div {
-  margin: 0 0 0 10px;
 }
 /*# sourceMappingURL=TagList.module.css.map */
