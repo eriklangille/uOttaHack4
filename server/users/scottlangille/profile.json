@@ -5,8 +5,8 @@
   "pinned": 0,
   "Projects": [
     {
-      "id": 0,
-      "name": "uOttaHack",
+      "id": "uOttaHack",
+      "name": "Showfolio (uOttaHack)",
       "shortDescription": "A hackathon based in Ottawa",
       "startDate": "2021-02-05",
       "endDate": "2021-02-07",
