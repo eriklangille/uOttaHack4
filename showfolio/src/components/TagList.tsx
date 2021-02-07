@@ -6,7 +6,7 @@ type TagsProps = {
 }
 
 const TagList = ({ Tags }: TagsProps ) => <div className={style.tagGroup}>
-  {Tags.map((tag, index) => <div className={`${style.tag} ${index == Tags.length - 1 ? style.tagLast : style.tagRest}`}>
+  {Tags.map((tag, index) => <div key={index} className={`${style.tag} ${index == Tags.length - 1 ? style.tagLast : style.tagRest}`}>
     <p className={style.tagText}>{tag}</p>
   </div>)}
 </div>

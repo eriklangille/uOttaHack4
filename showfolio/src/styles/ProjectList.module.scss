@@ -2,6 +2,15 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-
   margin: 0 24px;
+}
+
+.separator {
+  height: 20px;
+  opacity: 1;
+}
+
+.separator2 {
+  height: 100px;
+  opacity: 1;
 }
