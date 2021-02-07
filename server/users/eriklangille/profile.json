@@ -1,0 +1,39 @@
+{
+  "id": "eriklangille",
+  "name": "Erik Langille",
+  "description": "Fourth Year UBC Engineering Student on Co-op",
+  "pinned": 0,
+  "Projects": [
+    {
+      "id": "uOttaHack",
+      "name": "Showfolio (uOttaHack)",
+      "shortDescription": "A hackathon based in Ottawa",
+      "startDate": "2021-02-05",
+      "endDate": "2021-02-07",
+      "teammates": [
+        {"name": "Erik", "role": "Full-Stack Developer", "url": "https://github.com/eriklangille"},
+        {"name": "Scott", "role": "UI/UX Designer", "url": "https://github.com/scottlangille"}
+      ],
+      "links": {
+        "github": "https://github.com/scottlangille",
+        "web": "https://scottlangille.com"
+      },
+      "tags": ["React", "Adobe XD", "TypeScript", "Node.js", "Express"]
+    },
+    {
+      "id": "nwHacks2021",
+      "name": "nwHacks 2021 (Find My Neighbourhood)",
+      "shortDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
+      "startDate": "2021-01-15",
+      "endDate": "2021-01-17",
+      "teammates": [
+        {"name": "Scott", "role": "UI/UX Designer", "url": "https://github.com/scottlangille"}
+      ],
+      "links": {
+        "github": "https://github.com/scottlangille",
+        "web": "https://scottlangille.com"
+      },
+      "tags": ["React", "Adobe XD"]
+    }
+  ]
+}
